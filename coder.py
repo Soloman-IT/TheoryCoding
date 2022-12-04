@@ -35,28 +35,33 @@ def main(letters, mas_probability, len_text, text, dict_letters):
     return res
     
     
-    
 
-
+def get_data():
+    data = []
+    with open("file", "r+") as f:
+        data.append(f.readline().split())
+        data.append(f.readline().split())
+    return data
 if __name__ == '__main__':
     data = sys.argv[1:]
     
     text = data[0]
     len_text = len(text)
     
-    
+    let, res = get_data()
     
     dict_letters = {}
-    letters = "abcde"
+    # letters = "abcde"
 
-    for v in letters:
+    for v in let:
         dict_letters[v] = [0.0, 0.0]
         
-    data_probability = data[1]
-    mas_probability = data_probability.split()
+    data_probability = res
+    # mas_probability = data_probability.split()
     
     
-    code = main(letters, mas_probability, len_text, text, dict_letters)
+    code = main(let, data_probability, len_text, text, dict_letters)
     
     print(code)
     print(len_text)
+    
