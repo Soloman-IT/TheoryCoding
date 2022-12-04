@@ -1,3 +1,6 @@
+import sys
+
+
 def decompress(compressed):
     """Decompress a list of output ks to a string."""
     from io import StringIO
@@ -41,9 +44,9 @@ def decompress_bwt(len_bwt, bwt, num):
 
     return table[num-1]
 
-compressed =   *подается массив вида "0b1110110 0b1100001 0b1100111 0b1100001 0b1100001"
+compressed = sys.argv[1].split()
 
-num_line = 
+num_line = int(sys.argv[2])
 
 decompressed = decompress(compressed)
 print (decompressed)
