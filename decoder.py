@@ -41,10 +41,10 @@ def decompress_bwt(len_bwt, bwt, num):
 
     return table[num-1]
 
-compressed = 
+compressed =   *подается массив вида "0b1110110 0b1100001 0b1100111 0b1100001 0b1100001"
 
 num_line = 
 
 decompressed = decompress(compressed)
 print (decompressed)
-print(decompress_bwt(len(decompressed), decompressed, num_line))
+print(decompress_bwt(len(decompressed), decompressed, num_line+1))
